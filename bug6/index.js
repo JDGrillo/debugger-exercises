@@ -3,10 +3,12 @@
 //   given a list of transactions, will generate an HTML
 //   string representing the transactions
 //*******************************************************
+debugger;
 function renderTransactions(transactions) {
 	var finalHTML = '<div class="buffer">TRANSACTIONS</div>';
-
-	var transactionsHTML = transactions.map(function () {
+	// transaction needs to be passed through callback function
+	// transaction.name means nothing when transaction is not passed
+	var transactionsHTML = transactions.map(function (transaction) {
 		var transactionHTML = `
 		<div class="transaction">
 			<div class="name">${transaction.name}</div>

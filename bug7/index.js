@@ -17,8 +17,9 @@ function renderTransactions(transactions) {
 		`
 		return transactionHTML;
 	});
-
-	finalHTML += transactionsHTML.join();
+	// join will be default add a comma "," between array items
+	// force blank space with ""
+	finalHTML += transactionsHTML.join('');
 
 	return finalHTML;
 }
